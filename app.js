@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const path=require('path');
-app.use(express.static(path.join(__dirname+'/dist/FrontEnd')));
+app.use(express.static(path.join(__dirname, 'dist', 'Frontend')));
 
 app.use(morgan('dev'));
 app.use(express.json());
@@ -117,7 +117,7 @@ router.put('/employeelist', async (req, res) => {
 
 //! dont delete this code. it connects the front end file.
 app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname + '/dist/Frontend/index.html'));
+    res.sendFile(path.join(__dirname, 'dist', 'Frontend', 'index.html'));
 });
 
 const port = 3000;
